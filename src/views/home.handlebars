@@ -1,0 +1,36 @@
+{{!-- <h1>Tienda de productos</h1> --}}
+{{!-- <button id="formButton">Cargar producto</button> --}}
+<p></p>
+<table>
+  <caption>
+    Productos
+  </caption>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Imagen</th>
+    </tr>
+
+{{#if hasAny}}
+  {{#if limit}}
+  {{#each tempArray}}
+  <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.price}}</td>
+      <td><img src="{{this.thumbnails}}" alt="" width="50"></td>
+    </tr>
+  {{/each}}
+  {{/if}}
+
+  
+  {{#each response}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.price}}</td>
+      <td><img src="{{this.thumbnails}}" alt="" width="50"></td>
+    </tr>
+  {{/each}}
+{{else}}
+<td colspan="3">No hay productos</td>
+{{/if}}
+</table>

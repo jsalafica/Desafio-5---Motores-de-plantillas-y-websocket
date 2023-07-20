@@ -1,0 +1,196 @@
+[
+  {
+    "id": 2,
+    "title": "Plancha",
+    "description": "Plancha electrica",
+    "price": 34,
+    "code": "aswesd1233",
+    "stock": 5,
+    "status": true,
+    "category": "Electrodomestico",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 4,
+    "title": "LCD",
+    "description": "LCD electrico",
+    "price": 34,
+    "code": "abc231234",
+    "stock": 5,
+    "status": true,
+    "category": "Electrodomestico",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 6,
+    "title": "Auricular",
+    "description": "Auricular inalambrico",
+    "price": 1,
+    "code": "auri1234",
+    "stock": 5,
+    "status": true,
+    "category": "Electro",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 7,
+    "title": "producto prueba 7",
+    "description": "Este es un producto de prueba 7",
+    "price": 200,
+    "code": "abc1234567890",
+    "stock": 25,
+    "status": true,
+    "category": "Indumentaria",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 8,
+    "title": "producto prueba 8",
+    "description": "Este es un producto de prueba 8",
+    "price": 200,
+    "code": "abc1233",
+    "stock": 25,
+    "status": true,
+    "category": "Indumentaria",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 9,
+    "title": "producto prueba 9",
+    "description": "Este es un producto de prueba 9",
+    "price": 200,
+    "code": "abc12333",
+    "stock": 25,
+    "status": true,
+    "category": "Indumentaria",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 10,
+    "title": "Vino",
+    "description": "Vino malbec",
+    "price": 1234,
+    "code": "vino1234",
+    "stock": 5,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 11,
+    "title": "Aspiradora",
+    "description": "Aspiradora electrica",
+    "price": 34,
+    "code": "aswe1233",
+    "stock": 5,
+    "status": true,
+    "category": "Electrodomestico",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 12,
+    "title": "Robot Aspiradora",
+    "description": "Marca Midea M7",
+    "price": 234000,
+    "code": "m7awsd",
+    "stock": 5,
+    "status": true,
+    "category": "Electrodomestico",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 13,
+    "title": "Celular",
+    "description": "Samsung M32",
+    "price": 234000,
+    "code": "m7awsdase34",
+    "stock": 5,
+    "status": true,
+    "category": "Electrodomestico",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 14,
+    "title": "Billetera",
+    "description": "Billetera de cuero",
+    "price": 345,
+    "code": "bille123",
+    "stock": 5,
+    "status": true,
+    "category": "Indumentaria",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 15,
+    "title": "Relos",
+    "description": "Reloj malla de cuero",
+    "price": 341235,
+    "code": "reloj1234",
+    "stock": 5,
+    "status": true,
+    "category": "Indumentaria",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 16,
+    "title": "E-reader",
+    "description": "Paperwhite",
+    "price": 341235,
+    "code": "paper1234",
+    "stock": 8,
+    "status": true,
+    "category": "Electronica",
+    "thumbnails": "no tiene"
+  },
+  {
+    "id": 17,
+    "title": "Notebook",
+    "description": "Acer",
+    "price": 341235,
+    "code": "note1234",
+    "stock": 18,
+    "status": true,
+    "category": "Computacion"
+  },
+  {
+    "id": 18,
+    "title": "Notebook",
+    "description": "Acer",
+    "price": 341235,
+    "code": "note12345",
+    "stock": 18,
+    "status": true,
+    "category": "Computacion"
+  },
+  {
+    "id": 19,
+    "title": "Notebook",
+    "description": "Acer",
+    "price": 341235,
+    "code": "note123456",
+    "stock": 18,
+    "status": true,
+    "category": "Computacion"
+  },
+  {
+    "id": 20,
+    "title": "Notebook",
+    "description": "Acer",
+    "price": 341235,
+    "code": "note1234566",
+    "stock": 18,
+    "status": true,
+    "category": "Computacion"
+  },
+  {
+    "id": 21,
+    "title": "Notebook",
+    "description": "Acer",
+    "price": 341235,
+    "code": "note12345366",
+    "stock": 18,
+    "status": true,
+    "category": "Computacion",
+    "thumbnails": ""
+  }
+]

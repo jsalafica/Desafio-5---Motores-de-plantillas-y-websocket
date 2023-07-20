@@ -1,0 +1,19 @@
+{
+  "name": "desafio-5---motores-de-plantillas-y-websocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.1"
+  }
+}
