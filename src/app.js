@@ -38,11 +38,3 @@ io.on("connection", (socket) => {
     io.emit("messageLogs", messages);
   });
 });
-
-// app.listen(PORT, (error) => {
-//   if (!error) {
-//     console.log(`Server running port ${PORT}`);
-//   } else {
-//     console.log(error);
-//   }
-// });

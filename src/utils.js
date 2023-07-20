@@ -3,7 +3,7 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-const __filename = fileURLToPath(import.meta.url);
+export const __filename = fileURLToPath(import.meta.url);
 export const __dirname = dirname(__filename);
 
 async function readFile(file) {
@@ -28,4 +28,4 @@ async function writeFile(file, data) {
   }
 }
 
-export default { readFile, writeFile, __dirname };
+export default { readFile, writeFile, __dirname, __filename };
