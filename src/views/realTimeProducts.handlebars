@@ -43,11 +43,7 @@
     />
 
     <label for="productStock">Stock:</label>
-    <input
-      type="number"
-      id="productStock"
-      placeholder="Stock del producto"
-    />
+    <input type="number" id="productStock" placeholder="Stock del producto" />
 
     <label for="productCategory">Category:</label>
     <input
@@ -67,7 +63,7 @@
         <p>Descripción: {{description}}</p>
         <p>Precio: {{price}}</p>
         <img src={{thumbnails}} />
-        <br>
+        <br />
         <button class="btnEliminar" data-id="{{id}}">Eliminar</button>
       </li>
     {{/each}}
