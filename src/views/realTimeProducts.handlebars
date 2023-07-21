@@ -1,14 +1,7 @@
 <div>
   <h1>Realtime Productos</h1>
 
-  <form id="productForm" method="POST" action="/realtimeproducts">
-    <label for="productName">Nombre del producto:</label>
-    <input
-      type="text"
-      id="productName"
-      name="name"
-      placeholder="Nombre del producto"
-    />
+  <form id="productForm" method="POST" action="#">
 
     <label for="productTitle">Título:</label>
     <input
@@ -29,7 +22,6 @@
     <input
       type="number"
       id="productPrice"
-      name="price"
       step="0.01"
       placeholder="Precio del producto"
     />
@@ -38,7 +30,7 @@
     <input
       type="text"
       id="productThumbnail"
-      name="thumbnail"
+      name="thumbnails"
       placeholder="URL del thumbnail"
     />
 
@@ -54,8 +46,15 @@
     <input
       type="number"
       id="productStock"
-      name="stock"
       placeholder="Stock del producto"
+    />
+
+    <label for="productCategory">Category:</label>
+    <input
+      type="text"
+      id="productCategory"
+      name="category"
+      placeholder="Categoria del producto"
     />
 
     <button type="submit">Agregar</button>
@@ -63,11 +62,12 @@
   <ul id="productList">
     {{#each products}}
       <li>
-        <h3>{{name}}</h3>
-        <p>Título: {{title}}</p>
+        <h3>Título: {{title}}</h3>
+        <p>ID: {{id}}</p>
         <p>Descripción: {{description}}</p>
         <p>Precio: {{price}}</p>
-        <img src={{thumbnail}} />
+        <img src={{thumbnails}} />
+        <br>
         <button class="btnEliminar" data-id="{{id}}">Eliminar</button>
       </li>
     {{/each}}

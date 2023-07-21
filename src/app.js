@@ -3,9 +3,11 @@ import { engine } from "express-handlebars";
 import router from "./routes/router.js";
 import { __dirname } from "./utils.js";
 import { Server } from "socket.io";
+import { ProductManager } from "./ProductManager.js";
 
 const app = express();
 const PORT = 8080;
+const productManager = new ProductManager("products.json");
 
 const httpServer = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
@@ -25,16 +27,10 @@ app.use("/", router);
 
 io.on("connection", (socket) => {
   console.log("Nuevo cliente conectado!");
-  socket.on("new-user", (data) => {
-    socket.user = data.user;
-    socket.id = data.id;
-    io.emit("new-user-connected", {
-      user: socket.user,
-      id: socket.id,
-    });
-  });
-  socket.on("message", (data) => {
-    messages.push(data);
-    io.emit("messageLogs", messages);
+
+  socket.on("agregarProducto", (newProduct) => {
+    console.log("Nuevo producto recibido backend:", newProduct);
+    productManager.addProduct(newProduct);
+    io.emit("nuevoProductoAgregado", newProduct);
   });
 });

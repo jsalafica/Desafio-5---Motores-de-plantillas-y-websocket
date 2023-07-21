@@ -192,5 +192,92 @@
     "status": true,
     "category": "Computacion",
     "thumbnails": ""
+  },
+  {
+    "id": 22,
+    "title": "Camote",
+    "description": "Camote especial",
+    "price": 23,
+    "thumbnails": "",
+    "code": "45",
+    "stock": 43,
+    "category": "Alimentos",
+    "status": true
+  },
+  {
+    "id": 23,
+    "title": "Camote sin lavar",
+    "description": "Camote especial",
+    "price": 23,
+    "code": "45cvb",
+    "stock": 43,
+    "status": true,
+    "thumbnails": ""
+  },
+  {
+    "id": 24,
+    "title": "Camote sin lavar 2",
+    "description": "Camote especial 2",
+    "price": 2323,
+    "code": "45cvb32",
+    "stock": 4332,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": ""
+  },
+  {
+    "id": 25,
+    "title": "Camote sin lavar 3",
+    "description": "Camote especial 3",
+    "price": 0.77,
+    "code": "45cvb32",
+    "stock": 5,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": ""
+  },
+  {
+    "id": 26,
+    "title": "Camote sin lavar 4",
+    "description": "Camote especial 4",
+    "price": 45,
+    "code": "45cvb32xc",
+    "stock": 54,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": ""
+  },
+  {
+    "id": 27,
+    "title": "Camote sin lavar 5",
+    "description": "Camote especial 5",
+    "price": 45,
+    "code": "45cvb32xc",
+    "stock": 54,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": ""
+  },
+  {
+    "id": 28,
+    "title": "Camote sin lavar 89",
+    "description": "Camote especial 89",
+    "price": 4589,
+    "code": "45cvb32xc89",
+    "stock": 5489,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": ""
+  },
+  {
+    "id": 29,
+    "title": "Camote sin lavar 8934",
+    "description": "Camote especial 8934",
+    "price": 458934,
+    "code": "45cvb32xc8934",
+    "stock": 548934,
+    "status": true,
+    "category": "Alimentos",
+    "thumbnails": ""
   }
 ]

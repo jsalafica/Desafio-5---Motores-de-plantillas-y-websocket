@@ -14,20 +14,20 @@ export class ProductManager {
     thumbnails,
     code,
     stock,
-    status,
+    // status,
     category
   ) {
-    if (
-      title == undefined ||
-      description == undefined ||
-      price == undefined ||
-      code == undefined ||
-      stock == undefined ||
-      status == undefined ||
-      category == undefined
-    ) {
-      throw new Error("Todos los campos son obligatorios");
-    }
+    // if (
+    //   title == undefined ||
+    //   description == undefined ||
+    //   price == undefined ||
+    //   code == undefined ||
+    //   stock == undefined ||
+    //   // status == undefined ||
+    //   category == undefined
+    // ) {
+    //   throw new Error("Todos los campos son obligatorios");
+    // }
     try {
       let data = await utils.readFile(this.path);
       this.products = data?.length > 0 ? data : [];
@@ -41,13 +41,13 @@ export class ProductManager {
           this.products[this.products.length - 1].id + 1;
         const newProduct = {
           id: ProductManager.correlativoId,
-          title,
-          description,
-          price,
-          code,
-          stock,
-          status,
-          category,
+          title: title.title,
+          description: title.description,
+          price: title.price,
+          code: title.code,
+          stock: title.stock,
+          status: true,
+          category: title.category,
           thumbnails: !thumbnails ? "" : thumbnails,
         };
         this.products.push(newProduct);

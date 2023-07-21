@@ -1,17 +1,17 @@
 import { Router } from "express";
+import { ProductManager } from "../ProductManager.js";
 
-import { __filename, __dirname } from "../utils.js";
-import {
-  obtenerListaDeProductos,
-  guardarProducto,
-} from "../services/productUtils.js";
+const router = Router();
+const productManager = new ProductManager("products.json");
 
-const realtimeRouter = Router();
+router.route("/").get(async (req, res) => {
+  try {
+    let products = await productManager.getProducts();
 
-realtimeRouter.get("/", (req, res) => {
-  const products = obtenerListaDeProductos();
-
-  res.render("realtimeproducts", { products });
+    res.render("realtimeproducts", { products });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
-export default realtimeRouter;
+export default router;

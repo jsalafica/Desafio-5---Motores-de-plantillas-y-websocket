@@ -1,67 +1,42 @@
 const socket = io();
 
-let user;
+socket.emit("connection", "nuevo cliente conectado");
 
-let chatBox = document.getElementById("chatBox");
+document.getElementById("productForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const productTitle = document.getElementById("productTitle").value;
+  const productDescription =
+    document.getElementById("productDescription").value;
+  const productPrice = document.getElementById("productPrice").valueAsNumber;
+  const productThumbnail = document.getElementById("productThumbnail").value;
+  const productCode = document.getElementById("productCode").value;
+  const productStock = document.getElementById("productStock").valueAsNumber;
+  const productCategory = document.getElementById("productCategory").value;
+  // const productStatus = document.getElementById("productStatus").value;
 
-// Swal.fire({
-//   title: "Inicia sesion!",
-//   text: "Ingresa tu nombre de usuario",
-//   input: "text",
-//   confirmButtonText: "Cool",
-//   allowOutsideClick: false,
-//   inputValidator: (value) => {
-//     if (!value) {
-//       return "Debe ingresar un nombre de usuario";
-//     }
-//   },
-// }).then((result) => {
-//   if (result.value) {
-//     user = result.value;
-//     socket.emit("new-user", { user: user, id: socket.id });
-//   }
-// });
+  console.log(
+    "Nuevo producto agregado:",
+    productTitle,
+    productDescription,
+    productPrice,
+    productThumbnail
+  );
 
-chatBox.addEventListener("keyup", (e) => {
-  console.log("chatBox existe", chatBox);
-  console.log("evento key up", e.key, chatBox.value);
-  if (e.key === "Enter") {
-    if (chatBox.value.trim().length > 0) {
-      socket.emit("message", {
-        user: user,
-        message: chatBox.value,
-      });
-      chatBox.value = "";
-    }
-  }
-});
-
-socket.on("messageLogs", (data) => {
-  let log = document.getElementById("messageLogs");
-  let message = "";
-
-  data.forEach((elem) => {
-    message += `
-     
-        <div class="chat-message">
-        <div class="message-bubble">
-  
-          <div class="message-sender">${elem.user}</div>
-          <p>${elem.message}</p>
-          </div>
-  
-        </div>
-      `;
+  socket.emit("agregarProducto", {
+    title: productTitle,
+    description: productDescription,
+    price: productPrice,
+    thumbnails: productThumbnail,
+    code: productCode,
+    stock: productStock,
+    // status: productStatus,
+    category: productCategory,
   });
-
-  log.innerHTML = message;
 });
 
-socket.on("new-user-connected", (data) => {
-  if (data.id !== socket.id)
-    Swal.fire({
-      text: `${data.user} se ha conectado al chat`,
-      toast: true,
-      position: "top-end",
-    });
+socket.on("nuevoProductoAgregado", (newProduct) => {
+  const productList = document.getElementById("productList");
+  const li = document.createElement("li");
+  li.textContent = newProduct.title;
+  productList.appendChild(li);
 });
