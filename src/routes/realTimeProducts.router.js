@@ -7,7 +7,6 @@ const productManager = new ProductManager("products.json");
 router.route("/").get(async (req, res) => {
   try {
     let products = await productManager.getProducts();
-
     res.render("realTimeProducts", { products });
   } catch (err) {
     console.log(err);

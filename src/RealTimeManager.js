@@ -1,30 +1,21 @@
 import utils from "./utils.js";
 
-export class ProductManager {
+export class RealTimeManager {
   constructor(path) {
     this.path = path;
     this.products = [];
   }
   static correlativoId = 0;
 
-  async addProduct(
-    title,
-    description,
-    price,
-    thumbnails,
-    code,
-    stock,
-    status,
-    category
-  ) {
+  async addProduct(product) {
     if (
-      title == undefined ||
-      description == undefined ||
-      price == undefined ||
-      code == undefined ||
-      stock == undefined ||
-      status == undefined ||
-      category == undefined
+      product.title == undefined ||
+      product.description == undefined ||
+      product.price == undefined ||
+      product.code == undefined ||
+      product.stock == undefined ||
+      // status == undefined ||
+      product.category == undefined
     ) {
       throw new Error("Todos los campos son obligatorios");
     }
@@ -32,27 +23,27 @@ export class ProductManager {
       let data = await utils.readFile(this.path);
       this.products = data?.length > 0 ? data : [];
 
-      let codeExists = this.products.some((dato) => dato.code == code);
+      let codeExists = this.products.some((dato) => dato.code == product.code);
 
       if (codeExists) {
         throw new Error("El codigo ya existe por favor verifique");
       } else {
         if (this.products.length) {
-          ProductManager.correlativoId =
+          RealTimeManager.correlativoId =
             this.products[this.products.length - 1].id + 1;
         } else {
-          ProductManager.correlativoId = 1;
+          RealTimeManager.correlativoId = 1;
         }
         const newProduct = {
-          id: ProductManager.correlativoId,
-          title,
-          description,
-          price,
-          thumbnails: !thumbnails ? "" : thumbnails,
-          code,
-          stock,
-          category,
+          id: RealTimeManager.correlativoId,
+          title: product.title,
+          description: product.description,
+          price: product.price,
+          code: product.code,
+          stock: product.stock,
           status: true,
+          category: product.category,
+          thumbnails: !product.thumbnails ? "" : product.thumbnails,
         };
         this.products.push(newProduct);
         await utils.writeFile(this.path, this.products);
@@ -157,5 +148,5 @@ export class ProductManager {
 }
 
 export default {
-  ProductManager,
+  RealTimeManager,
 };

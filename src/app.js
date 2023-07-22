@@ -3,11 +3,11 @@ import { engine } from "express-handlebars";
 import router from "./routes/router.js";
 import { __dirname } from "./utils.js";
 import { Server } from "socket.io";
-import { ProductManager } from "./ProductManager.js";
+import { RealTimeManager } from "./RealTimeManager.js";
 
 const app = express();
 const PORT = 8080;
-const productManager = new ProductManager("products.json");
+const realTimeManager = new RealTimeManager("products.json");
 
 const httpServer = app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
 
   socket.on("agregarProducto", (newProduct) => {
     console.log("Nuevo producto recibido backend:", newProduct);
-    productManager.addProduct(newProduct);
+    realTimeManager.addProduct(newProduct);
     io.emit("nuevoProductoAgregado", newProduct);
   });
 });

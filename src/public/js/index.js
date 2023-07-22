@@ -21,6 +21,8 @@ document.getElementById("productForm").addEventListener("submit", (event) => {
     productPrice,
     productThumbnail
   );
+  const productForm = document.getElementById("productForm");
+  productForm.reset();
 
   socket.emit("agregarProducto", {
     title: productTitle,
@@ -29,14 +31,25 @@ document.getElementById("productForm").addEventListener("submit", (event) => {
     thumbnails: productThumbnail,
     code: productCode,
     stock: productStock,
-    // status: productStatus,
     category: productCategory,
   });
 });
 
 socket.on("nuevoProductoAgregado", (newProduct) => {
   const productList = document.getElementById("productList");
-  const li = document.createElement("li");
-  li.textContent = newProduct.title;
-  productList.appendChild(li);
+
+  const div = document.createElement("li");
+  div.innerHTML = `
+    
+      <h3>Titulo: ${newProduct.title}</h3>
+      <p>Descripción: ${newProduct.description}</p>
+      <p>Código: ${newProduct.code}</p>
+      <p>Precio: ${newProduct.price}</p>
+      <img src=${newProduct.thumbnails}</img>
+      <br>
+      <button class="eliminarBtn" data-product-id="{{this.id}}">Eliminar</button>
+      
+    `;
+
+  productList.appendChild(div);
 });
