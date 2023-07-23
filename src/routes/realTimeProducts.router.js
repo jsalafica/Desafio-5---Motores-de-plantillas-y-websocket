@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { ProductManager } from "../ProductManager.js";
+import { RealTimeManager } from "../RealTimeManager.js";
 
 const router = Router();
-const productManager = new ProductManager("products.json");
+const realTimeManager = new RealTimeManager("products.json");
 
 router.route("/").get(async (req, res) => {
   try {
-    let products = await productManager.getProducts();
+    let products = await realTimeManager.getProducts();
     res.render("realTimeProducts", { products });
   } catch (err) {
     console.log(err);

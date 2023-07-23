@@ -31,6 +31,12 @@ io.on("connection", (socket) => {
   socket.on("agregarProducto", (newProduct) => {
     console.log("Nuevo producto recibido backend:", newProduct);
     realTimeManager.addProduct(newProduct);
-    io.emit("nuevoProductoAgregado", newProduct);
+    // io.emit("nuevoProductoAgregado", newProduct);
+  });
+
+  socket.on("eliminarProducto", (productId) => {
+    const id = Number(productId);
+    // console.log(id);
+    realTimeManager.deleteProductById(id);
   });
 });

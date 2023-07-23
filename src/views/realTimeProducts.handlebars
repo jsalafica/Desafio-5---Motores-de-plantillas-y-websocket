@@ -1,7 +1,7 @@
 <div>
   <h1>Realtime Productos</h1>
 
-  <form id="productForm" method="POST" action="#">
+  <form id="productForm" method="POST" action="/realTimeProducts">
 
     <label for="productTitle">Título:</label>
     <input
@@ -64,7 +64,7 @@
         <p>Precio: {{price}}</p>
         <img src={{thumbnails}} />
         <br />
-        <button class="btnEliminar" data-id="{{id}}">Eliminar</button>
+        <button class="eliminarBtn" data-product-id="{{id}}">Eliminar</button>
       </li>
     {{/each}}
   </ul>

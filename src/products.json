@@ -1,101 +1,24 @@
 [
   {
-    "id": 1,
-    "title": "Papa",
-    "description": "Papa lavada",
-    "price": 12,
-    "code": "12ab",
-    "stock": 23,
+    "id": 10,
+    "title": "Repollo",
+    "description": "Repollo blanco",
+    "price": 123,
+    "code": "abc123",
+    "stock": 12,
     "status": true,
     "category": "Alimentos",
-    "thumbnails": ""
+    "thumbnails": "https://images.hola.com/imagenes/cocina/noticiaslibros/20210310185727/repollo-col-berza-diferencia-recetas-faciles/0-928-597/tres-repollos-1-a.jpg"
   },
   {
-    "id": 2,
-    "title": "Papa",
-    "description": "Papa lavada",
-    "price": 12,
-    "code": "12ab",
-    "stock": 23,
+    "id": 11,
+    "title": "Papa multicolor",
+    "description": "Papa multicolor",
+    "price": 123,
+    "code": "34dfre",
+    "stock": 20,
     "status": true,
     "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 3,
-    "title": "Papa2",
-    "description": "Papa lavada2",
-    "price": 121,
-    "code": "12abs",
-    "stock": 233,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 4,
-    "title": "Papa2",
-    "description": "Papa lavada2",
-    "price": 121,
-    "code": "12absas",
-    "stock": 233,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 5,
-    "title": "Papa3",
-    "description": "Papa lavada3",
-    "price": 121,
-    "code": "12absas3",
-    "stock": 233,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 6,
-    "title": "Papa4",
-    "description": "Papa lavada4",
-    "price": 121,
-    "code": "12absas4",
-    "stock": 233,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 7,
-    "title": "Papa5",
-    "description": "Papa lavada5",
-    "price": 121,
-    "code": "12absas5",
-    "stock": 233,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 8,
-    "title": "Papa6",
-    "description": "Papa lavada6",
-    "price": 12145,
-    "code": "12absas6",
-    "stock": 23342,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
-  },
-  {
-    "id": 9,
-    "title": "Papa7",
-    "description": "Papa lavada 7",
-    "price": 12145,
-    "code": "12absas7",
-    "stock": 23342,
-    "status": true,
-    "category": "Alimentos",
-    "thumbnails": ""
+    "thumbnails": "https://www.latercera.com/resizer/3Ss80SR_JUB5xvHGdITbkwRx0MQ=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/RYLE7N5WWJGQ5KA5K4ZCACFSTQ.jpg"
   }
 ]

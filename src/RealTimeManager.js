@@ -54,59 +54,9 @@ export class RealTimeManager {
     }
   }
 
-  async updateProductById(
-    pid,
-    title,
-    description,
-    price,
-    thumbnails,
-    code,
-    stock,
-    status,
-    category
-  ) {
-    if (
-      pid == null ||
-      title == undefined ||
-      description == undefined ||
-      price == undefined ||
-      code == undefined ||
-      stock == undefined ||
-      status == undefined ||
-      category == undefined
-    ) {
-      throw new Error("Todos los campos son obligatorios");
-    }
-    const productTemp = {};
-    productTemp.title = title;
-    productTemp.description = description;
-    productTemp.code = code;
-    productTemp.price = price;
-    productTemp.status = status;
-    productTemp.stock = stock;
-    productTemp.category = category;
-    productTemp.thumbnails = thumbnails;
-    try {
-      let products = await this.getProducts();
-      this.products = products?.length > 0 ? products : [];
-      let productIndex = products.findIndex((dato) => dato.id === pid);
-      if (productIndex !== -1) {
-        this.products[productIndex] = {
-          ...this.products[productIndex],
-          ...productTemp,
-        };
-        await utils.writeFile(this.path, products);
-        return this.products[productIndex];
-      } else {
-        return { mensaje: "no existe el producto solicitado" };
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   async deleteProductById(pid) {
     try {
+      // console.log(pid);
       let products = await this.getProducts();
       this.products = products?.length > 0 ? products : [];
       let productIndex = products.findIndex((dato) => dato.id === pid);
@@ -127,20 +77,6 @@ export class RealTimeManager {
     try {
       let data = await utils.readFile(this.path);
       return data?.length > 0 ? data : [];
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async getProductById(id) {
-    try {
-      let data = await this.getProducts();
-      let product = data.find((dato) => dato.id === id);
-      if (product !== undefined) {
-        return product;
-      } else {
-        return "Producto inexistente.";
-      }
     } catch (error) {
       console.log(error);
     }
